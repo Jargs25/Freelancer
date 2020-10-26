@@ -231,6 +231,13 @@ form legend {
 .campo input {
     flex: 1;
     height: 4rem;
+    overflow: auto;
+}
+
+@media (min-width: 480px) {
+    .campo input {
+        overflow: visible;
+    }
 }
 
 .campo textarea {
@@ -246,4 +253,51 @@ form legend {
     display: flex;
     /*Alineación de botón*/
     justify-content: center;
+}
+
+.pre-byJG {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    bottom: -50px;
+    transition: bottom 0.2s ease;
+}
+
+.byJG {
+    width: fit-content;
+    margin: 0;
+    padding: 0 10px;
+    bottom: 90px;
+    color: black;
+    text-decoration: none;
+    background-color: rgba(255, 255, 255, 0.7);
+    display: flex;
+    font-family: 'Times New Roman';
+    font-size: 1.8rem;
+    align-items: center;
+}
+
+.pre-byJG.show {
+    bottom: 0;
+    height: 32px;
+    transition: bottom 1s ease 1s;
+}
+
+@media (min-width: 768px) {
+    .pre-byJG.show {
+        bottom: 40px;
+    }
+    .byJG {
+        font-size: 2rem;
+    }
+}
+
+.byJG>.image {
+    background-image: url('/favicon.ico');
+    background-position: center center;
+    background-size: cover;
+    width: 25px;
+    height: 25px;
+    margin: 0 4px;
 }
